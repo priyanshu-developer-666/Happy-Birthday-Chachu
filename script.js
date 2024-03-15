@@ -17,4 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
         wishDiv.appendChild(paragraph);
         wishesContainer.appendChild(wishDiv);
     });
+
+    const playButton = document.getElementById('playButton');
+    const birthdayMusic = document.getElementById('birthdayMusic');
+
+    playButton.addEventListener('click', function() {
+        if (birthdayMusic.paused) {
+            birthdayMusic.play();
+            playButton.textContent = 'Pause Music';
+        } else {
+            birthdayMusic.pause();
+            playButton.textContent = 'Play Music';
+        }
+    });
 });
